@@ -49,28 +49,19 @@ nav a:hover {
     color: #ff4500; /* Change color on hover */
 }
 
-
-/* Media Query for Mobile Screens (max-width: 600px) */
-@media (max-width: 500px) {
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
     header {
-        padding: 10px; /* Reduce header padding on mobile */
-        flex-direction: row; /* Stack the logo and nav vertically */
-        align-items: center; /* Center the items */
-    }
-
-    header .logo {
-        font-size: 1.5rem; /* Smaller font size for the logo */
+        padding: 10px;
     }
 
     nav {
-        flex-direction: row; /* Ensure nav items are horizontally aligned on mobile */
-        justify-content: center; /* Center the nav items */
-        width: 500%; /* Allow the nav to take full width */
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-start; /* Align nav links to the left */
     }
 
     nav a {
-        font-size: 1rem; /* Adjust font size of nav links on mobile */
-        margin: 5px 10px; /* Add space between nav links */
+        margin: 0 10px; /* Reduced space between links */
     }
 }
 
@@ -187,7 +178,7 @@ nav a:hover {
 }
 
 /* Media Queries for Mobile (Screen width <= 768px) */
-@media (max-width: 768px) {
+@media (max-width: 500px) {
     .home {
         flex-direction: row; /* Keep the layout in a row on small screens */
         justify-content: space-between;
@@ -217,7 +208,7 @@ nav a:hover {
 /* Media Queries for Laptop (Screen width 768px to 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) {
     .image-container img {
-        max-width: 60%; /* Smaller image size on laptops */
+        max-width: 80%; /* Smaller image size on laptops */
     }
 }
 

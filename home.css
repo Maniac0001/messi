@@ -50,6 +50,30 @@ nav a:hover {
 }
 
 
+/* Media Query for Mobile Screens (max-width: 600px) */
+@media (max-width: 600px) {
+    header {
+        padding: 10px; /* Reduce header padding on mobile */
+        flex-direction: column; /* Stack the logo and nav vertically */
+        align-items: center; /* Center the items */
+    }
+
+    header .logo {
+        font-size: 1.5rem; /* Smaller font size for the logo */
+    }
+
+    nav {
+        flex-direction: row; /* Ensure nav items are horizontally aligned on mobile */
+        justify-content: center; /* Center the nav items */
+        width: 100%; /* Allow the nav to take full width */
+    }
+
+    nav a {
+        font-size: 1rem; /* Adjust font size of nav links on mobile */
+        margin: 5px 10px; /* Add space between nav links */
+    }
+}
+
 /* Container Styles */
 .home-section {
     display: flex; /* Use flexbox to align text and video side by side */

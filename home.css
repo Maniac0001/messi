@@ -10,6 +10,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;  /* Ensure no horizontal scroll but vertical scroll allowed */
 }
 
 /* Body and General Layout */
@@ -18,7 +19,7 @@ body {
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    overflow: hidden;
+    overflow-y: auto; /* Allow vertical scroll */
 }
 
 /* Header Styles */
@@ -49,18 +50,21 @@ nav a:hover {
     color: #ff4500; /* Change color on hover */
 }
 
-
-/* Container Styles */
+/* Home Section Layout */
 .home-section {
     display: flex; /* Use flexbox to align text and video side by side */
     align-items: center; /* Center content vertically */
     justify-content: space-between; /* Space out the text and video */
     padding: 20px;
+    height: auto; /* Allow section to expand */
+    min-height: 100vh; /* Ensure it takes full height of the viewport */
+    box-sizing: border-box;
+    animation: gradientAnimation 5s ease-in-out infinite;
 }
 
 /* Text Section */
 .text-container {
-    max-width: 25%; /* Text takes half of the screen */
+    max-width: 25%; /* Text takes part of the screen */
     color: #2e2525;
 }
 
@@ -85,25 +89,7 @@ nav a:hover {
     border-radius: 10px; /* Optional: rounded corners for video */
 }
 
-/* Media Query for Mobile Screens */
-@media (max-width: 600px) {
-    .home-section {
-        flex-direction: column-reverse; /* Stack content vertically on mobile */
-        align-items: center; /* Center the content */
-        padding: 10px;
-    }
-
-    .text-container {
-        max-width: 100%; /* Text takes the full width */
-        text-align: center; /* Center text on small screens */
-    }
-
-    .video-container {
-        width: 100%; /* Video takes full width on mobile */
-        margin-top: 20px; /* Space between text and video */
-    }
-}
-
+/* Keyframe for Gradient Animation */
 @keyframes gradientAnimation {
     0% {
         background: linear-gradient(to right, #2aa3c5, #f7cbc4);
@@ -116,98 +102,34 @@ nav a:hover {
     }
 }
 
-.home-section {
-    animation: gradientAnimation 5s ease-in-out infinite;
-}
-
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
+/* Media Query for Mobile Screens */
+@media (max-width: 600px) {
+    .home-section {
+        flex-direction: column-reverse; /* Stack content vertically on mobile */
+        align-items: center; /* Center the content */
+        padding: 10px;
     }
-    100% {
-        opacity: 1;
-    }
-}
 
-@keyframes slideInLeft {
-    0% {
-        transform: translateX(-50px);
-        opacity: 0;
+    .text-container {
+        max-width: 100%; /* Text takes full width on small screens */
+        text-align: center; /* Center text */
     }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
+
+    .video-container {
+        width: 100%; /* Video takes full width on mobile */
+        margin-top: 20px; /* Space between text and video */
     }
 }
 
-@keyframes slideInRight {
-    0% {
-        transform: translateX(50px);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes fadeInText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Media Queries for Mobile (Screen width <= 768px) */
-@media (max-width: 768px) {
-    .home {
-        flex-direction: row; /* Keep the layout in a row on small screens */
-        justify-content: space-between;
-    }
-
-    /* Ensure image stays to the right */
-    .image-container {
-        order: 2; /* Ensure image is on the right side, not stacking below */
-    }
-
-    /* Adjust text positioning on mobile */
-    .greeting {
-        order: 1;
-        text-align: left;
-    }
-
-    /* Smaller font sizes for mobile */
-    .greeting h1 {
-        font-size: 2.5rem;
-    }
-
-    .greeting p {
-        font-size: 1.2rem;
-    }
-}
-
-/* Media Queries for Laptop (Screen width 768px to 1024px) */
-@media (min-width: 768px) and (max-width: 1024px) {
-    .image-container img {
-        max-width: 60%; /* Smaller image size on laptops */
-    }
-}
-
-.nav-link.active {
-    color: #ff4b5c;
-    font-weight: bold;
-}
-
-/* Basic Footer Styling */
+/* Footer Styles */
 footer {
     background-color: #222;
     color: #fff;
     padding: 30px 0;
     text-align: center;
+    position: relative; /* Ensures footer is positioned correctly */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Footer Text Styling */
@@ -220,26 +142,21 @@ footer {
 /* Social Media Icons Styling */
 .footer-social {
     margin-top: 20px;
-    text-decoration: none;
 }
 
-/* Style for each icon */
 .social-icon {
     margin: 0 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
     text-decoration: none;
 }
 
-/* Hover Effects */
 .social-icon img {
     width: 40px;
     height: 40px;
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
-    text-decoration: none;
 }
 
-/* Hover effect for social media icons */
 .social-icon:hover img {
     transform: scale(1.2);  /* Slight zoom effect */
     opacity: 1;

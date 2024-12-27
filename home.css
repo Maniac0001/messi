@@ -51,10 +51,10 @@ nav a:hover {
 
 
 /* Media Query for Mobile Screens (max-width: 600px) */
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     header {
         padding: 10px; /* Reduce header padding on mobile */
-        flex-direction: column; /* Stack the logo and nav vertically */
+        flex-direction: row; /* Stack the logo and nav vertically */
         align-items: center; /* Center the items */
     }
 
@@ -65,7 +65,7 @@ nav a:hover {
     nav {
         flex-direction: row; /* Ensure nav items are horizontally aligned on mobile */
         justify-content: center; /* Center the nav items */
-        width: 100%; /* Allow the nav to take full width */
+        width: 500%; /* Allow the nav to take full width */
     }
 
     nav a {

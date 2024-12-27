@@ -52,11 +52,10 @@ nav a:hover {
 
 /* Home Section Layout */
 .home-section {
-    display: flex; /* Use flexbox to align text and video side by side */
-    flex-direction: row;
+    display: flex; /* Flexbox layout */
     align-items: center; /* Center content vertically */
     justify-content: space-between; /* Space out the text and video */
-    padding: 20px;
+    padding: 5vw;
     height: auto; /* Allow section to expand */
     min-height: 100vh; /* Ensure it takes full height of the viewport */
     box-sizing: border-box;
@@ -65,23 +64,23 @@ nav a:hover {
 
 /* Text Section */
 .text-container {
-    max-width: 50%; /* Text takes part of the screen */
+    max-width: 40%; /* Set a max-width for the text */
     color: #2e2525;
 }
 
 .text-container h1 {
-    font-size: 2.5rem;
+    font-size: 3vw;
 }
 
 .text-container p {
-    font-size: 1.2rem;
+    font-size: 1.5vw;
 }
 
 /* Video Container */
 .video-container {
-    width: 55%; /* Adjust video container width */
+    width: 45%; /* Adjust video container width */
     display: flex; /* Center video within the container */
-    justify-content: right;
+    justify-content: center;
 }
 
 .video-container video {
@@ -103,26 +102,33 @@ nav a:hover {
     }
 }
 
-/* Media Query for Small Mobile Screens */
-@media (max-width: 600px) {
+/* Media Query for Small Screens */
+@media (max-width: 768px) {
+    /* Adjust the layout for tablets and small screens */
     .home-section {
-        flex-direction: row; /* Stack content vertically */
-        padding: 10px;
-        align-items: center; /* Center both text and video */
+        flex-direction: column; /* Stack content vertically on small screens */
+        align-items: center;
+        padding: 5vw;
     }
 
     .text-container {
-        max-width: 80%; /* Limit text width (not 100%) */
+        max-width: 80%; /* Text takes more space on smaller screens */
         text-align: center; /* Center text */
-        margin-bottom: 20px; /* Space between text and video */
     }
 
     .video-container {
-        max-width: 80%; /* Limit video width (not 100%) */
+        width: 80%; /* Video takes more space */
         margin-top: 20px; /* Space between text and video */
     }
-}
 
+    .text-container h1 {
+        font-size: 4vw; /* Smaller text size for smaller screens */
+    }
+
+    .text-container p {
+        font-size: 2vw; /* Smaller text size for smaller screens */
+    }
+}
 
 /* Footer Styles */
 footer {

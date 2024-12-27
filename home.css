@@ -107,8 +107,8 @@ nav a:hover {
 @media (max-width: 600px) {
     .home-section {
         flex-direction: column-reverse; /* Stack content vertically on mobile */
-        align-items: center; /* Center the content */
-        padding: 10px;
+        align-items: right; /* Center the content */
+        padding: 90px;
     }
 
     .text-container {

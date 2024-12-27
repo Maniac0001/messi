@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+}
+
 /* Body and General Layout */
 body {
     font-family: 'Roboto', sans-serif; /* Use Google Fonts */

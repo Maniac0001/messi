@@ -53,6 +53,7 @@ nav a:hover {
 /* Home Section Layout */
 .home-section {
     display: flex; /* Use flexbox to align text and video side by side */
+    flex-direction: row;
     align-items: center; /* Center content vertically */
     justify-content: space-between; /* Space out the text and video */
     padding: 20px;
@@ -64,7 +65,7 @@ nav a:hover {
 
 /* Text Section */
 .text-container {
-    max-width: 25%; /* Text takes part of the screen */
+    max-width: 50%; /* Text takes part of the screen */
     color: #2e2525;
 }
 
@@ -78,7 +79,7 @@ nav a:hover {
 
 /* Video Container */
 .video-container {
-    width: 45%; /* Adjust video container width */
+    width: 55%; /* Adjust video container width */
     display: flex; /* Center video within the container */
     justify-content: right;
 }

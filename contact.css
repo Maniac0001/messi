@@ -93,6 +93,22 @@ nav a:hover {
     font-weight: bold;
 }
 
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: row; /* Ensure links are in a row */
+        justify-content: flex-start; /* Align nav links to the left */
+    }
+
+    nav a {
+        margin: 0 10px; /* Reduced space between links */
+    }
+}
+
 /* Contact Section */
 .contact-section {
     display: flex;

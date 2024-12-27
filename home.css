@@ -219,6 +219,7 @@ footer {
 .social-icon {
     margin: 0 15px;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
 }
 
 /* Hover Effects */
@@ -227,6 +228,7 @@ footer {
     height: 40px;
     opacity: 0.8;
     transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
 }
 
 /* Hover effect for social media icons */

@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
     margin: 0;
     height: 100vh;
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: hidden;
     cursor: url('https://custom-cursor.com/en/collection/color/indigo-dye-blue'), auto; /* Indigo Dye Blue Custom Cursor */
 }
 
@@ -158,17 +158,62 @@ nav a:hover {
     cursor: pointer; /* Custom cursor for social icons */
 }
 
-/* Footer */
+/* Basic Footer Styling */
 footer {
-    text-align: center;
-    background-color: rgba(34, 34, 34, 0.8);
+    background-color: #222;
     color: #fff;
-    padding: 20px;
-    font-size: 0.9rem;
-    position: fixed;
-    bottom: 0;
+    padding: 30px 0;
+    text-align: center;
+    position: relative;  /* Change from fixed or absolute */
     width: 100%;
-    z-index: 10;
+    box-sizing: border-box;
+}
+
+/* Footer Text Styling */
+.footer-text p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Social Media Icons Styling */
+.footer-social {
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+/* Style for each icon */
+.social-icon {
+    margin: 0 15px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover Effects */
+.social-icon img {
+    width: 40px;
+    height: 40px;
+    opacity: 0.8;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    text-decoration: none;
+}
+
+/* Hover effect for social media icons */
+.social-icon:hover img {
+    transform: scale(1.2);  /* Slight zoom effect */
+    opacity: 1;
+}
+
+/* Media Query for Small Screens (Mobile) */
+@media (max-width: 600px) {
+    .footer-text p {
+        font-size: 1rem;
+    }
+
+    .social-icon img {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 /* Keyframe Animations */

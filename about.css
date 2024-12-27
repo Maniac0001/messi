@@ -1,206 +1,199 @@
-/* Reset some default styles */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body and General Layout */
+/* General Body and Typography Styling */
 body {
+    margin: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #f0f0f0;
     color: #333;
-    line-height: 1.6;
-    overflow-x: hidden; /* No horizontal scroll */
-    overflow-y: auto; /* Allow vertical scrolling */
+    overflow-x: hidden;
+    position: relative;
 }
 
-/* Header Styles */
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(to right, #2aa3c5, #f7cbc4); /* Gradient 1 */
+    }
+    25% {
+        background: linear-gradient(to right, #86b2d8, #add8e6); /* Gradient 2 */
+    }
+    50% {
+        background: linear-gradient(to right, #7233ba, #eae5e4); /* Gradient 3 */
+    }
+    75% {
+        background: linear-gradient(to right, #5433eb, #968b8a); /* Gradient 4 */
+    }
+    100% {
+        background: linear-gradient(to right, #ffb6c1, #8a2be2); /* Gradient 5 */
+    }
+}
+
+/* Background Gradient with Blur Effect */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(to right, #2aa3c5, #f7cbc4);
+    animation: gradientAnimation 10s ease-in-out infinite;
+    filter: blur(50px); /* Apply blur effect */
+    transform: scale(1.1); /* Slight zoom for smoother edges */
+}
+
+/* Header Styling */
 header {
+    position: sticky;
+    top: 0;
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent for overlay */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: #222;
+    padding: 15px 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-header .logo {
-    color: #fff;
-    font-size: 2rem;
+.logo {
     font-family: 'Space Mono', monospace;
-    font-weight: bold;
+    font-size: 1.8rem;
+    color: #222;
 }
 
-nav a {
-    color: #fff;
-    margin: 0 15px;
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-link {
     text-decoration: none;
-    font-weight: bold;
+    font-size: 1rem;
+    color: #555;
     transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #ff4500;
+.nav-link:hover {
+    color: #007bff;
 }
 
-/* About Section Styles */
+.nav-link.active {
+    color: #ff4b5c;
+    font-weight: bold;
+}
+
+/* Full Page Styling for About Me Section */
 #about {
-    padding: 50px 20px;
-    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full height of the viewport */
     text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 1; /* Place above the background */
+    color: #fff;
 }
 
-#about .container {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.about-section h1 {
-    font-size: 2.5rem;
+#about h1 {
+    font-size: 3rem;
     margin-bottom: 20px;
 }
 
-.about-section p {
-    font-size: 1.2rem;
+#about p {
+    font-size: 1.5rem;
+    max-width: 800px;
     line-height: 1.8;
-    color: #555;
 }
 
-/* Projects Section Styles */
+/* Projects Section Styling */
 #projects {
-    padding: 50px 20px;
-    background-color: #f7f7f7;
-    text-align: center;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent for overlay */
+    padding: 60px 20px;
+    position: relative;
+    z-index: 1;
 }
 
 #projects h2 {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
     margin-bottom: 40px;
+    color: #222;
 }
 
+/* Projects Container */
 .projects-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 10px;
 }
 
+/* Individual Project Item Styling */
 .project-item {
-    background-color: #fff;
-    padding: 20px;
+    background: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item img {
     width: 100%;
-    height: auto;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
 .project-item p {
-    font-size: 1rem;
-    font-weight: bold;
+    margin-top: 15px;
+    font-size: 1.2rem;
     color: #333;
-    margin-top: 10px;
 }
 
-/* Hover effect for project items */
+/* Hover Effect for Project Items */
 .project-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Animation for text and images */
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.about-section,
-.projects-container {
-    animation: fadeInUp 1s ease-out forwards;
-}
-
-.project-item:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-.project-item:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.project-item:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-/* Footer Styles */
+/* Footer Styling */
 footer {
-    background-color: #222;
+    background: #222;
     color: #fff;
-    padding: 30px 0;
     text-align: center;
-}
-
-footer .footer-text p {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: bold;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 .footer-social {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
-.social-icon {
-    margin: 0 15px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.footer-social img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
 }
 
-.social-icon img {
-    width: 40px;
-    height: 40px;
-    opacity: 0.8;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+.footer-social img:hover {
+    transform: scale(1.1);
 }
 
-.social-icon:hover img {
-    transform: scale(1.2);
-    opacity: 1;
-}
-
-/* Media Query for Mobile (max-width: 768px) */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    header {
-        padding: 10px;
+    #about {
+        text-align: center;
+        padding: 60px 20px;
     }
 
-    nav {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-
-    nav a {
-        margin: 0 10px;
-    }
-
-    #about .container,
-    #projects .container {
-        padding: 0 10px;
-    }
-
-    .about-section h1 {
+    #projects h2 {
         font-size: 2rem;
     }
 
-    .about-section p {
-        font-size: 1rem;
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
     }
 }

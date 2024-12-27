@@ -16,6 +16,29 @@ body {
     cursor: url('https://custom-cursor.com/en/collection/color/indigo-dye-blue'), auto; /* Indigo Dye Blue Custom Cursor */
 }
 
+/* Gradient Animation */
+@keyframes gradientAnimation {
+    0% {
+        background: linear-gradient(to right, #2aa3c5, #f7cbc4); /* Gradient 1 */
+    }
+    25% {
+        background: linear-gradient(to right, #86b2d8, #add8e6); /* Gradient 2 */
+    }
+    50% {
+        background: linear-gradient(to right, #7233ba, #eae5e4); /* Gradient 3 */
+    }
+    75% {
+        background: linear-gradient(to right, #5433eb, #968b8a); /* Gradient 4 */
+    }
+    100% {
+        background: linear-gradient(to right, #ffb6c1, #8a2be2); /* Gradient 5 */
+    }
+}
+
+body {
+    animation: gradientAnimation 10s ease-in-out infinite; /* Apply gradient animation */
+}
+
 /* Background Video */
 .video-background {
     position: fixed;
@@ -142,17 +165,6 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Cursor Effects for Links */
-a {
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-a:hover {
-    color: #ff4500;
-    transform: scale(1.1);
-    cursor: pointer; /* Custom cursor for links */
 }
 
 /* Media Queries */

@@ -98,7 +98,7 @@ nav a:hover {
 
 @keyframes gradientAnimation {
     0% {
-        background: linear-gradient(to right, #2aa3c5, #af5242);
+        background: linear-gradient(to right, #2aa3c5, #f7cbc4);
     }
     50% {
         background: linear-gradient(to right, #f0f8ff, #add8e6);

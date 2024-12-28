@@ -60,6 +60,39 @@ html, body {
     color: #ff6347; /* Tomato color on hover */
 }
 
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar ul {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .navbar ul li a {
+        font-size: 18px;
+    }
+
+    .navbar-gif {
+        height: 50px; /* Adjust gif size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar ul {
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+    }
+
+    .navbar-gif {
+        height: 40px; /* Smaller gif size for very small screens */
+    }
+}
+
+
 /* Contact Section */
 .contact-section {
     padding: 40px 20px;
@@ -98,6 +131,7 @@ html, body {
 /* Footer Section */
 footer {
     text-align: center;
+    position: sticky;
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
 }

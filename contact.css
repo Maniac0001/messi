@@ -132,10 +132,13 @@ html, body {
 
 /* Footer Section */
 footer {
+    background-color: #fff;
+    padding: 10px 0;
     text-align: center;
-    position: sticky;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    margin-top: auto;
 }
 
 /* Responsive Design for Contact Section */

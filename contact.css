@@ -101,3 +101,51 @@ footer {
     padding: 20px;
     background-color: rgba(255, 255, 255, 0.8);
 }
+
+/* Responsive Design for Contact Section */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 20px;
+    }
+
+    .text-content h2 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    .text-content p {
+        font-size: 1rem; /* Smaller paragraph font */
+    }
+
+    .contact-info {
+        padding: 15px; /* Adjust padding */
+        font-size: 0.9rem; /* Reduce font size */
+    }
+
+    .contact-info h3 {
+        font-size: 1.5rem; /* Adjust subheading size */
+    }
+
+    .contact-info ul li {
+        margin-bottom: 10px; /* Add spacing between items */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 1.8rem; /* Further adjust heading size */
+    }
+
+    .contact-info {
+        padding: 10px; /* Tighter padding for smaller screens */
+        font-size: 0.8rem; /* Further reduce font size */
+    }
+
+    .contact-info h3 {
+        font-size: 1.2rem; /* Adjust subheading size */
+    }
+}
+

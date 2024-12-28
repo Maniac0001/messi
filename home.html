@@ -12,40 +12,33 @@
     <!-- Navigation Bar -->
     <header class="navbar">
         <div class="navbar-container">
-        <h1 class="logo">Adi's Football Corner</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html" class="active">Home</a></li>
-                <li><a href="players.html">Players</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+            <h1 class="logo">Adi's Football Corner</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html" class="active">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Home Section (Full Height) -->
+    <section class="home">
         <div class="hero-content">
             <h1>Welcome to <span>Adi's Football Corner</span></h1>
             <p>Your one-stop hub for everything football—players, teams, and the latest updates. Dive in and explore!</p>
             <a href="#about" class="btn">Learn More</a>
         </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <h2>About Us</h2>
-        <p>
-            Football isn't just a game; it's a way of life. At Adi's Football Corner, we bring you the passion and stories of football. Whether you're a fan of legendary players or upcoming stars, we’ve got you covered.
-        </p>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="cta">
-        <h2>Join the Football Fanbase</h2>
-        <p>Stay updated with the latest football news and stories.</p>
-        <a href="players.html" class="btn btn-primary">Explore Players</a>
+        <!-- About Content Inside Home -->
+        <div class="about-content">
+            <h2>About Us</h2>
+            <p>
+                Football isn't just a game; it's a way of life. At Adi's Football Corner, we bring you the passion and stories of football. Whether you're a fan of legendary players or upcoming stars, we’ve got you covered.
+            </p>
+        </div>
     </section>
 
     <!-- Footer -->
@@ -59,7 +52,7 @@
         // Scroll animations for smooth transition
         document.querySelector('.hero .btn').addEventListener('click', function(e) {
             e.preventDefault();
-            const target = document.querySelector('#about');
+            const target = document.querySelector('.about-content');
             window.scrollTo({
                 top: target.offsetTop,
                 behavior: 'smooth'

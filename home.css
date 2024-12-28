@@ -17,6 +17,12 @@ html, body {
     font-family: 'Montserrat', sans-serif;
 }
 
+.navbar-gif {
+    height: 30px; /* Adjust to your preferred size */
+    width: auto; /* Maintain aspect ratio  /* Optional: Add spacing */
+}
+
+
 .navbar-container {
     display: flex;
     justify-content: space-between;

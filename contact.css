@@ -79,7 +79,7 @@ html, body {
 @media (max-width: 480px) {
     .navbar ul {
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
         text-align: center;
     }
 

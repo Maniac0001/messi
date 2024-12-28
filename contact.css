@@ -81,24 +81,19 @@ html, body {
     font-size: 1.2rem;
 }
 
-.contact-section .contact-info ul {
-    list-style: none;
-    padding: 0;
+.contact-info {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for separation */
+    border-radius: 15px; /* Smooth edges */
+    padding: 20px; /* Inner spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-top: 20px; /* Space above the section */
+    max-width: 500px; /* Limit the width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.contact-section .contact-info ul li {
-    margin: 10px 0;
-}
-
-.contact-section .contact-info a {
-    color: #ff6347;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.contact-section .contact-info a:hover {
-    text-decoration: underline;
-}
 
 /* Footer Section */
 footer {

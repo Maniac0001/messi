@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
     <!-- Header Section -->
     <header class="navbar">
-        <h1 class="logo">Adi's Football Corner</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="players.html">Players</a></li>
-                <li><a href="info.html">Info</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="navbar-container">
+            <img src="images/icon.gif" alt="Football Corner Logo" class="navbar-gif">
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="players.html">Players</a></li>
+                    <li><a href="info.html">Info</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <!-- Contact Section -->
@@ -41,12 +42,21 @@
         </div>
     </section>
 
-<script src="contact.js"></script>
-
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 Adi's Football Corner. All rights reserved.</p>
     </footer>
 
+    <!-- Smooth Scrolling JS -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

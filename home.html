@@ -11,6 +11,7 @@
 <body>
     <!-- Navigation Bar -->
     <header class="navbar">
+        <div class="navbar-container">
         <h1 class="logo">Adi's Football Corner</h1>
         <nav>
             <ul>
@@ -20,6 +21,7 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
+        </div>
     </header>
 
     <!-- Hero Section -->
@@ -51,5 +53,18 @@
         <p>&copy; 2024 Adi's Football Corner. All rights reserved.</p>
         <p>Designed with ❤️ by Adi.</p>
     </footer>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Scroll animations for smooth transition
+        document.querySelector('.hero .btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector('#about');
+            window.scrollTo({
+                top: target.offsetTop,
+                behavior: 'smooth'
+            });
+        });
+    </script>
 </body>
 </html>

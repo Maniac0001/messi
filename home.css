@@ -1,261 +1,240 @@
-/* General Reset and Base Styles */
-* {
-    margin: 0;
-    padding: 0;
+:root {
+    --navbar-bg-color: rgba(23, 23, 23, 1);
+    --navbar-text-color: rgba(229, 237, 248, 1);
+    --navbar-hover-color: rgba(248, 64, 101, 1);
+    --navbar-border-color: rgba(173, 176, 180, 1);
+    --navbar-padding: 20px;
+    --navbar-font-family: 'HelveticaNeue', sans-serif;
+    --navbar-font-size: 18px;
+    --navbar-font-weight: 400;
+}
+
+*,
+*::before,
+*::after {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #1c1c1c;
-    color: #fff;
-    font-size: 16px;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: var(--navbar-font-family);
+    background-color: var(--navbar-bg-color);
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-/* Navigation Bar Styling */
-/* Navigation Bar Styling */
 .navbar {
-    position: relative; /* Change from sticky to relative */
-    background-color: rgba(0, 0, 0, 0.7); /* Optional: you can keep the background color */
-    padding: 20px 30px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--navbar-bg-color);
+    padding: var(--navbar-padding);
+    z-index: 1000;
+    border-bottom: 1px solid var(--navbar-border-color);
+}
+
+.navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
 }
 
-
-.navbar .logo {
-    font-size: 28px;
-    color: #fff;
-    font-family: 'Inter', sans-serif;
+.logo {
+    color: var(--navbar-text-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-.navbar nav ul {
+nav {
     display: flex;
-    list-style-type: none;
 }
 
-.navbar nav ul li {
-    margin-left: 30px;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.navbar nav ul li a {
-    color: #fff;
-    font-size: 18px;
-    font-weight: 600;
-    transition: color 0.3s ease;
+nav ul li {
+    margin-left: 20px;
 }
 
-.navbar nav ul li a:hover,
-.navbar nav ul li a.active {
-    color: #00bcd4;
+nav ul li a {
+    text-decoration: none;
+    color: var(--navbar-text-color);
+    font-size: var(--navbar-font-size);
+    font-weight: var(--navbar-font-weight);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
 }
 
-/* Hero Section */
+nav ul li a:hover {
+    color: var(--navbar-hover-color);
+    border-bottom: 2px solid var(--navbar-hover-color);
+}
+
+
+/* Hero Section Styling */
 .hero {
-    position: relative;
-    height: 100vh;
-    background-image: url('your-image.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+    color: #fff;
+    padding: 100px 20px;
     text-align: center;
-}
-
-.hero .hero-content {
-    max-width: 600px;
+    position: relative;
+    overflow: hidden;
 }
 
 .hero h1 {
-    font-size: 50px;
-    font-weight: 700;
-    color: #fff;
+    font-size: 48px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    animation: fadeIn 2s ease-in-out forwards;
 }
 
-.hero h1 span {
-    color: #00bcd4;
+.hero span {
+    color: #ff9f00;
+    font-weight: 700;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 22px;
     margin-bottom: 30px;
-    color: #fff;
 }
 
-.hero .btn-hero {
-    background-color: #00bcd4;
+.hero .btn {
     padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
+    background-color: #ff9f00;
     color: #fff;
+    text-decoration: none;
     font-size: 18px;
-    transition: background-color 0.3s ease;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
-.hero .btn-hero:hover {
-    background-color: #008c99;
+.hero .btn:hover {
+    background-color: #d87c00;
+    transform: translateY(-5px);
 }
 
-/* About Section */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* About Section Styling */
 .about {
-    padding: 60px 15px;
+    background-color: #fff;
+    padding: 80px 20px;
     text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    margin-top: -50px;
 }
 
 .about h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .about p {
-    font-size: 18px;
-    color: #ddd;
-    line-height: 1.8;
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 60px 15px;
-    background: #333;
-    text-align: center;
-}
-
-.gallery h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #fff;
-}
-
-.gallery-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card img,
-.card video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-.card p {
-    position: absolute;
-    bottom: 15px;
-    left: 15px;
     font-size: 20px;
-    font-weight: 600;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.6);
-    padding: 10px 15px;
-    border-radius: 10px;
+    line-height: 1.6;
+    color: #555;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-}
-
-/* Call to Action Section */
+/* Call to Action Section Styling */
 .cta {
-    background-color: #1d2b64;
-    padding: 60px 15px;
+    background-color: #2d3436;
+    color: #fff;
+    padding: 80px 20px;
     text-align: center;
+    animation: slideIn 1s ease-out;
 }
 
 .cta h2 {
-    font-size: 32px;
+    font-size: 36px;
     margin-bottom: 20px;
-    color: #fff;
+    font-weight: 600;
 }
 
 .cta p {
-    font-size: 18px;
-    color: #fff;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
 .cta .btn-primary {
-    background-color: #00bcd4;
     padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: 600;
+    background-color: #ff9f00;
     color: #fff;
+    text-decoration: none;
     font-size: 18px;
+    border-radius: 50px;
     transition: background-color 0.3s ease;
+    position: relative;
+    z-index: 2;
 }
 
 .cta .btn-primary:hover {
-    background-color: #008c99;
+    background-color: #d87c00;
+    transform: translateY(-5px);
 }
 
-/* Footer */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Footer Styling */
 footer {
-    background-color: #000;
+    background-color: #2d3436;
     color: #fff;
-    padding: 30px 15px;
+    padding: 20px;
     text-align: center;
+    font-size: 14px;
 }
 
-footer p {
-    margin: 5px 0;
-}
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+    .navbar nav ul {
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
 
-/* Media Queries for Responsiveness */
+    .navbar nav ul li {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
 
-/* For Tablets and smaller screens */
-@media (max-width: 768px) {
     .hero h1 {
-        font-size: 40px;
+        font-size: 36px;
     }
 
     .hero p {
+        font-size: 18px;
+    }
+
+    .cta h2 {
+        font-size: 28px;
+    }
+
+    .cta p {
         font-size: 16px;
     }
-
-    .gallery-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .gallery .card {
-        height: 300px;
-    }
 }
 
-/* For Mobile Devices */
-@media (max-width: 480px) {
-    .hero h1 {
-        font-size: 30px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-    .gallery-container {
-        grid-template-columns: 1fr;
-    }
-
-    .gallery .card {
-        height: 250px;
-    }
+/* Additional Interactive Effects */
+.hero-content:hover {
+    animation: heroContentAnim 1.2s ease-in-out;
 }
+
+@keyframes heroContentAnim {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+

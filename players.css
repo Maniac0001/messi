@@ -60,7 +60,7 @@ a {
 .search-section {
     text-align: center;
     padding: 50px 15px;
-    background: linear-gradient(135deg, #1f2937, #4b6cb7);
+    background: linear-gradient(135deg, #18ab95, #df6dd6);
     color: #fff;
 }
 
@@ -98,7 +98,6 @@ a {
     border: none;
     padding: 10px 15px;
     font-size: 16px;
-    border-radius: 50%;
     cursor: pointer;
     margin-left: 10px;
     transition: background-color 0.3s;

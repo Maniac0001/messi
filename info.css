@@ -3,13 +3,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background: #f4f4f4;
-    color: #333;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda); /* Soft gradient background */
+    color: #fff;
     font-size: 16px;
+    line-height: 1.6;
 }
 
 a {
@@ -21,17 +22,18 @@ a {
 .navbar {
     position: sticky;
     top: 0;
-    background-color: #0d1f2d;
-    padding: 15px 30px;
+    background-color: #000;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
 
-.navbar .logo {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+.navbar .logo a {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
     color: #fff;
 }
 
@@ -41,14 +43,14 @@ a {
 }
 
 .navbar nav ul li {
-    margin-left: 20px;
+    margin-left: 30px;
 }
 
 .navbar nav ul li a {
     color: #fff;
     font-size: 18px;
-    font-weight: 600;
-    transition: color 0.3s;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .navbar nav ul li a:hover,
@@ -56,32 +58,34 @@ a {
     color: #00bcd4;
 }
 
-/* Info Section */
+/* Info Sections */
 .info-section {
-    padding: 50px 15px;
-    background: #fff;
+    padding: 60px 15px;
+    background: transparent;
 }
 
 .info-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 30px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1); /* Transparent white for modern effect */
+    border-radius: 8px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .info-container h2 {
-    font-size: 36px;
+    font-size: 32px;
     text-align: center;
     margin-bottom: 20px;
-    color: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
 }
 
 .info-container p {
     font-size: 18px;
-    color: #666;
-    line-height: 1.6;
+    color: #ddd;
+    line-height: 1.8;
     margin-bottom: 20px;
 }
 
@@ -89,7 +93,7 @@ a {
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #0d1f2d;
+    background-color: #000;
     color: #fff;
 }
 

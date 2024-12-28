@@ -18,8 +18,21 @@ html, body {
 }
 
 .navbar-gif {
-    height: 30px; /* Adjust to your preferred size */
-    width: auto; /* Maintain aspect ratio  /* Optional: Add spacing */
+    height: 80px; /* Default height for larger screens */
+    width: auto;  /* Maintain aspect ratio */
+    margin-right: 10px; /* Optional spacing */
+}
+
+@media (max-width: 768px) {
+    .navbar-gif {
+        height: 50px; /* Smaller height for tablets and mobiles */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-gif {
+        height: 40px; /* Even smaller for very small screens */
+    }
 }
 
 

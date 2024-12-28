@@ -1,0 +1,118 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body {
+    background: #f4f4f4;
+    color: #333;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: #0d1f2d;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #fff;
+}
+
+.navbar nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar nav ul li {
+    margin-left: 20px;
+}
+
+.navbar nav ul li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.navbar nav ul li a:hover,
+.navbar nav ul li a.active {
+    color: #00bcd4;
+}
+
+/* Info Section */
+.info-section {
+    padding: 50px 15px;
+    background: #fff;
+}
+
+.info-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-container h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.info-container p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0d1f2d;
+    color: #fff;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets and smaller screens */
+@media (max-width: 768px) {
+    .info-container h2 {
+        font-size: 28px;
+    }
+
+    .info-container p {
+        font-size: 16px;
+    }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+    .info-container h2 {
+        font-size: 24px;
+    }
+
+    .info-container p {
+        font-size: 14px;
+    }
+}

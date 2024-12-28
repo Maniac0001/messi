@@ -1,0 +1,213 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #f3f8fc, #eaecef);
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+    position: sticky;
+    top: 0;
+    background: linear-gradient(90deg, #b3d9ff, #cce7ff);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #007acc;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #007acc;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    background-color: #e6f7ff;
+    color: #004d80;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #f5fcff, #e6f3ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #004d80;
+    margin-bottom: 20px;
+}
+
+.hero span {
+    color: #007acc;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 15px 0;
+    color: #555;
+}
+
+.hero .btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: linear-gradient(90deg, #80c9ff, #66bfff);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn:hover {
+    background: linear-gradient(90deg, #66bfff, #007acc);
+    transform: translateY(-3px);
+}
+
+/* About Section */
+.about {
+    padding: 50px;
+    background: linear-gradient(135deg, #ffffff, #f0f8ff);
+    text-align: center;
+    margin: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #004d80;
+}
+
+.about p {
+    font-size: 1.1em;
+    color: #666;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 50px;
+    text-align: center;
+    background: linear-gradient(135deg, #e8f4ff, #f8fcff);
+}
+
+.gallery h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #007acc;
+}
+
+.gallery .gallery-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.gallery .card {
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    background: linear-gradient(135deg, #f9fdff, #edf7ff);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img,
+.card video {
+    width: 100%;
+    height: auto;
+    border-bottom: 2px solid #cce7ff;
+}
+
+/* Call to Action */
+.cta {
+    padding: 50px;
+    background: linear-gradient(135deg, #edf9ff, #cce7ff);
+    text-align: center;
+    color: #333;
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #004d80;
+}
+
+.cta p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.cta .btn-primary {
+    background: linear-gradient(90deg, #80c9ff, #66bfff);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta .btn-primary:hover {
+    background: linear-gradient(90deg, #66bfff, #007acc);
+    transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e6f7ff, #f5fcff);
+    font-size: 0.9em;
+    color: #333;
+}
+
+footer p {
+    margin: 5px 0;
+}

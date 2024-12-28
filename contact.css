@@ -96,6 +96,8 @@ html, body {
 /* Contact Section */
 .contact-section {
     padding: 40px 20px;
+    flex-grow: 1;
+    height: 100vh;
 }
 
 .contact-section .container {

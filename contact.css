@@ -1,36 +1,45 @@
 /* General Body and HTML Setup */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: #ecbfbf; /* Light cream color for background */
+    background-color: #ecbfbf;
+    /* Light cream color for background */
     height: 100%;
-    color: #000; /* Text color: black */
+    color: #000;
+    /* Text color: black */
     overflow-x: hidden;
 }
 
 /* Navbar Styling */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white */
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-gif {
-    height: 80px; /* Default height for larger screens */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 10px; /* Optional spacing */
+    height: 80px;
+    /* Default height for larger screens */
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Optional spacing */
 }
 
 @media (max-width: 768px) {
     .navbar-gif {
-        height: 50px; /* Smaller height for tablets and mobiles */
+        height: 50px;
+        /* Smaller height for tablets and mobiles */
     }
 }
 
 @media (max-width: 480px) {
     .navbar-gif {
-        height: 40px; /* Even smaller for very small screens */
+        height: 40px;
+        /* Even smaller for very small screens */
     }
 }
 
@@ -57,7 +66,8 @@ html, body {
 }
 
 .navbar ul li a:hover {
-    color: #ff6347; /* Tomato color on hover */
+    color: #ff6347;
+    /* Tomato color on hover */
 }
 
 /* Responsive Design */
@@ -72,7 +82,8 @@ html, body {
     }
 
     .navbar-gif {
-        height: 50px; /* Adjust gif size for smaller screens */
+        height: 50px;
+        /* Adjust gif size for smaller screens */
     }
 }
 
@@ -88,7 +99,8 @@ html, body {
     }
 
     .navbar-gif {
-        height: 40px; /* Smaller gif size for very small screens */
+        height: 40px;
+        /* Smaller gif size for very small screens */
     }
 }
 
@@ -117,14 +129,22 @@ html, body {
 }
 
 .contact-info {
-    background: rgba(255, 255, 255, 0.2); /* Transparent white */
-    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Border for separation */
-    border-radius: 15px; /* Smooth edges */
-    padding: 20px; /* Inner spacing */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    margin-top: 20px; /* Space above the section */
-    max-width: 500px; /* Limit the width */
+    background: rgba(255, 255, 255, 0.2);
+    /* Transparent white */
+    backdrop-filter: blur(10px);
+    /* Blur effect for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* Border for separation */
+    border-radius: 15px;
+    /* Smooth edges */
+    padding: 20px;
+    /* Inner spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow for depth */
+    margin-top: 20px;
+    /* Space above the section */
+    max-width: 500px;
+    /* Limit the width */
     margin-left: auto;
     margin-right: auto;
 }
@@ -148,24 +168,30 @@ footer {
     }
 
     .text-content h2 {
-        font-size: 2rem; /* Adjust heading size */
+        font-size: 2rem;
+        /* Adjust heading size */
     }
 
     .text-content p {
-        font-size: 1rem; /* Smaller paragraph font */
+        font-size: 1rem;
+        /* Smaller paragraph font */
     }
 
     .contact-info {
-        padding: 15px; /* Adjust padding */
-        font-size: 0.9rem; /* Reduce font size */
+        padding: 15px;
+        /* Adjust padding */
+        font-size: 0.9rem;
+        /* Reduce font size */
     }
 
     .contact-info h3 {
-        font-size: 1.5rem; /* Adjust subheading size */
+        font-size: 1.5rem;
+        /* Adjust subheading size */
     }
 
     .contact-info ul li {
-        margin-bottom: 10px; /* Add spacing between items */
+        margin-bottom: 10px;
+        /* Add spacing between items */
     }
 }
 
@@ -175,16 +201,19 @@ footer {
     }
 
     .text-content h2 {
-        font-size: 1.8rem; /* Further adjust heading size */
+        font-size: 1.8rem;
+        /* Further adjust heading size */
     }
 
     .contact-info {
-        padding: 10px; /* Tighter padding for smaller screens */
-        font-size: 0.8rem; /* Further reduce font size */
+        padding: 10px;
+        /* Tighter padding for smaller screens */
+        font-size: 0.8rem;
+        /* Further reduce font size */
     }
 
     .contact-info h3 {
-        font-size: 1.2rem; /* Adjust subheading size */
+        font-size: 1.2rem;
+        /* Adjust subheading size */
     }
 }
-

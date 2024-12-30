@@ -1,37 +1,46 @@
 /* General Body and HTML Setup */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: #ecbfbf; /* Light cream color for background */
+    background-color: #ecbfbf;
+    /* Light cream color for background */
     height: 100%;
-    color: #000; /* Text color: black */
+    color: #000;
+    /* Text color: black */
     overflow-x: hidden;
 }
 
 /* Navbar Styling */
 .navbar {
     position: sticky;
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent white */
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
 }
 
 .navbar-gif {
-    height: 80px; /* Default height for larger screens */
-    width: auto;  /* Maintain aspect ratio */
-    margin-right: 10px; /* Optional spacing */
+    height: 80px;
+    /* Default height for larger screens */
+    width: auto;
+    /* Maintain aspect ratio */
+    margin-right: 10px;
+    /* Optional spacing */
 }
 
 @media (max-width: 768px) {
     .navbar-gif {
-        height: 50px; /* Smaller height for tablets and mobiles */
+        height: 50px;
+        /* Smaller height for tablets and mobiles */
     }
 }
 
 @media (max-width: 480px) {
     .navbar-gif {
-        height: 40px; /* Even smaller for very small screens */
+        height: 40px;
+        /* Even smaller for very small screens */
     }
 }
 
@@ -60,7 +69,8 @@ html, body {
 }
 
 .navbar ul li a:hover {
-    color: #ff6347; /* Tomato color on hover */
+    color: #ff6347;
+    /* Tomato color on hover */
 }
 
 /* Home Section (Full Screen) */
@@ -69,11 +79,14 @@ html, body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Full height of the viewport */
-    background-color: #f5f5f5; /* Light cream background */
+    height: 100vh;
+    /* Full height of the viewport */
+    background-color: #f5f5f5;
+    /* Light cream background */
     text-align: center;
     position: relative;
-    padding-top: 120px; /* Adjust based on the navbar height */
+    padding-top: 120px;
+    /* Adjust based on the navbar height */
 }
 
 .hero-content {
@@ -88,7 +101,8 @@ html, body {
 }
 
 .hero-content span {
-    color: #ff6347; /* Tomato color for emphasis */
+    color: #ff6347;
+    /* Tomato color for emphasis */
 }
 
 .hero-content p {
@@ -98,7 +112,8 @@ html, body {
 
 .hero-content .btn {
     display: inline-block;
-    background-color: #ff6347; /* Tomato color */
+    background-color: #ff6347;
+    /* Tomato color */
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -109,7 +124,8 @@ html, body {
 }
 
 .hero-content .btn:hover {
-    background-color: #ff4500; /* Darker tomato on hover */
+    background-color: #ff4500;
+    /* Darker tomato on hover */
 }
 
 /* About Content Inside Home */
@@ -117,13 +133,15 @@ html, body {
     max-width: 800px;
     margin-top: 50px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for the About section */
+    background-color: rgba(255, 255, 255, 0.9);
+    /* Light background for the About section */
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: left;
     opacity: 0;
     transform: translateY(50px);
-    animation: fadeInUp 1s forwards 0.5s; /* Animation for smooth transition */
+    animation: fadeInUp 1s forwards 0.5s;
+    /* Animation for smooth transition */
 }
 
 .about-content h2 {

@@ -12,80 +12,54 @@ body {
     overflow-x: hidden;
 }
 
-/* Navbar Styling */
+/* Navigation Bar */
 .navbar {
-    position: sticky;
-    background-color: rgba(255, 255, 255, 0.8);
-    /* Semi-transparent white */
+    background-color: #2b1a47;
     padding: 20px;
-    font-family: 'Montserrat', sans-serif;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-
-.switch {
-    margin: 0 20px;
-}
-
-.navbar-gif {
-    height: 80px;
-    /* Default height for larger screens */
-    width: auto;
-    /* Maintain aspect ratio */
-    margin-right: 10px;
-    /* Optional spacing */
-}
-
-@media (max-width: 768px) {
-    .navbar-gif {
-        height: 50px;
-        /* Smaller height for tablets and mobiles */
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar-gif {
-        height: 40px;
-        /* Even smaller for very small screens */
-    }
-}
-
 
 .navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
 }
 
-.navbar ul {
-    list-style: none;
+.navbar-gif {
+    height: 50px;
+}
+
+nav ul {
     display: flex;
-    gap: 20px;
+    list-style: none;
 }
 
-.navbar ul li a {
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    font-style: italic;
-    text-decoration: underline;
-    font-size: 30px;
-    color: black;
-    transition: color 0.3s ease;
+    font-weight: 600;
 }
 
-.navbar ul li a:hover {
-    color: #ff6347;
-    /* Tomato color on hover */
+nav ul li a.active {
+    text-decoration: underline;
 }
 
 /* Home Section (Full Screen) */
 .home {
+    background-color: #4c13a8;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
     /* Full height of the viewport */
-    background-color: #f5f5f5;
     /* Light cream background */
     text-align: center;
     position: relative;
@@ -161,13 +135,14 @@ body {
 
 /* Footer Styling */
 footer {
-    background-color: #fff;
-    padding: 20px;
+    background-color:  #2b1a47;
+    padding: 10px;
     text-align: center;
     position: relative;
     bottom: 0;
     width: 100%;
     font-size: 1rem;
+    color: white;
 }
 
 /* Animations */

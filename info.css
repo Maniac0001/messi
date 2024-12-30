@@ -1,0 +1,263 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Body & Background */
+body {
+    background-color: #1e1e2f;
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #2b1a47;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-gif {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: #8a2be2;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('images/football-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 5;
+}
+
+.hero-content {
+    z-index: 10;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    padding: 10px 30px;
+    background-color: #8a2be2;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .btn:hover {
+    background-color: #7328b2;
+}
+
+/* Info Section */
+.info-section {
+    padding: 50px 20px;
+}
+
+/* Content Box */
+.content-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.content-box img {
+    width: 50%;
+    border-radius: 8px;
+}
+
+.content-box .info-text {
+    width: 45%;
+}
+
+.content-box h3 {
+    font-size: 2em;
+    color: #8a2be2;
+    margin-bottom: 15px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.content-box p {
+    color: #f4f4f4;
+    font-size: 1.2em;
+}
+
+/* Stats Section */
+.stats-section {
+    background-color: #2b1a47;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 2.5em;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.stat-box {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.stat-item {
+    background-color: #8a2be2;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.stat-item h4 {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.stat-item p {
+    color: #fff;
+}
+
+/* Social Media Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.social-icon {
+    font-size: 2em;
+    color: #fff;
+    background-color: #8a2be2;
+    padding: 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #7328b2;
+}
+
+/* Footer */
+.footer {
+    background-color: #2b1a47;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Scroll to Top Button */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #8a2be2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #7328b2;
+}
+
+/* Animations */
+.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-box img {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .content-box .info-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .stats-section {
+        padding: 40px 20px;
+    }
+
+    .stat-box {
+        flex-direction: column;
+    }
+
+    .stat-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

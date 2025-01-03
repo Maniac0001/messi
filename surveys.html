@@ -32,58 +32,87 @@
         </div>
     </section>
 
-    <!-- Polls Section -->
-    <section class="polls-section">
-        <h2>Current Polls</h2>
+        <section class="polls-section">
+            <h2>Current Polls</h2>
+        
+            <!-- Poll 1 -->
+            <div class="poll">
+                <h3>Who is the greatest football player of all time?</h3>
+                <div class="poll-options">
+                    <label>
+                        <input type="radio" name="poll1" value="Messi"> Messi
+                    </label>
+                    <label>
+                        <input type="radio" name="poll1" value="Ronaldo"> Ronaldo
+                    </label>
+                    <label>
+                        <input type="radio" name="poll1" value="Pele"> Pele
+                    </label>
+                    <label>
+                        <input type="radio" name="poll1" value="Maradona"> Maradona
+                    </label>
+                </div>
+                <button class="vote-btn" data-poll="poll1">Vote</button>
+                <div class="poll-result" id="poll1-result"></div>
+            </div>
+        
+            <!-- Poll 2 -->
+            <div class="poll">
+                <h3>Who will win the next World Cup?</h3>
+                <div class="poll-options">
+                    <label>
+                        <input type="radio" name="poll2" value="Brazil"> Brazil
+                    </label>
+                    <label>
+                        <input type="radio" name="poll2" value="France"> France
+                    </label>
+                    <label>
+                        <input type="radio" name="poll2" value="Germany"> Germany
+                    </label>
+                    <label>
+                        <input type="radio" name="poll2" value="Argentina"> Argentina
+                    </label>
+                </div>
+                <button class="vote-btn" data-poll="poll2">Vote</button>
+                <div class="poll-result" id="poll2-result"></div>
+            </div>
+        
+            <!-- Additional Polls (Repeat similar structure for up to 10 polls) -->
+        </section>
+        
+ <!-- Opinions Section -->
+<section class="opinions-section">
+    <h2>Share Your Opinion</h2>
 
-        <!-- Poll 1 -->
-        <div class="poll">
-            <h3>Who is the greatest football player of all time?</h3>
-            <div class="options">
-                <button class="poll-option" data-value="pele">Pele</button>
-                <button class="poll-option" data-value="messi">Lionel Messi</button>
-                <button class="poll-option" data-value="ronaldo">Cristiano Ronaldo</button>
-                <button class="poll-option" data-value="maradona">Diego Maradona</button>
-            </div>
-            <div class="results hidden">
-                <p>Pele: <span id="pele-percentage">0%</span></p>
-                <p>Messi: <span id="messi-percentage">0%</span></p>
-                <p>Ronaldo: <span id="ronaldo-percentage">0%</span></p>
-                <p>Maradona: <span id="maradona-percentage">0%</span></p>
-            </div>
-        </div>
+    <!-- Button to Show Opinion Form -->
+    <button id="showOpinionFormBtn" class="show-opinion-btn">+ Opinion</button>
 
-        <!-- Poll 2 -->
-        <div class="poll">
-            <h3>Which team has the most loyal fanbase?</h3>
-            <div class="options">
-                <button class="poll-option" data-value="real-madrid">Real Madrid</button>
-                <button class="poll-option" data-value="barcelona">Barcelona</button>
-                <button class="poll-option" data-value="man-united">Manchester United</button>
-                <button class="poll-option" data-value="liverpool">Liverpool</button>
-            </div>
-            <div class="results hidden">
-                <p>Real Madrid: <span id="real-madrid-percentage">0%</span></p>
-                <p>Barcelona: <span id="barcelona-percentage">0%</span></p>
-                <p>Manchester United: <span id="man-united-percentage">0%</span></p>
-                <p>Liverpool: <span id="liverpool-percentage">0%</span></p>
-            </div>
+    <!-- Opinion Form Pop-up (Initially Hidden) -->
+    <div id="opinionPopup" class="opinion-popup hidden">
+        <div class="popup-content">
+            <span id="closePopupBtn" class="close-popup-btn">&times;</span>
+            <!-- Name input (upper text box) -->
+            <input type="text" id="name" placeholder="Your Name" maxlength="50">
+            <!-- Opinion input (lower text box) -->
+            <textarea id="opinionText" placeholder="Share your opinion (max 50 characters)" maxlength="50"></textarea>
+            <button id="submitOpinion" class="submit-btn">Submit Opinion</button>
         </div>
-    </section>
+    </div>
+
+    <!-- Display Opinions -->
+    <div id="opinionsList" class="opinions-list">
+        <p>No opinions shared. Share yours!</p>
+    </div>
+</section>
+
+
+
+
 
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; 2024 Adi's Football Corner. All rights reserved. Designed with ❤️ by Adi.</p>
     </footer>
-
-<!-- Popup Message -->
-<div id="popup" class="popup hidden">
-    <div class="popup-content">
-        <p>You have already voted!</p>
-        <button id="closePopup">OK</button>
-    </div>
-</div>
-
 
     <script src="surveys.js"></script>
 </body>

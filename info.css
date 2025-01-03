@@ -183,6 +183,7 @@ nav ul li a.active {
 }
 
 /* Footer */
+/* Footer Styling */
 .footer {
     background-color: #2b1a47;
     padding: 20px;
@@ -191,10 +192,10 @@ nav ul li a.active {
     color: white;
     position: relative;
     bottom: 0;
-    margin-top: auto; /* Ensures footer sticks to the bottom */
+    margin-top: auto;
 }
 
-/* Ensure footer always sticks to the bottom */
+/* Additional footer styling if needed */
 footer {
     margin-top: auto;
 }
@@ -272,4 +273,33 @@ footer {
     .info-text {
         margin-top: 10px;
     }
+}
+
+
+/* Opinions Section Styling */
+.opinions-section {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+.opinions-section h3 {
+    font-size: 1.8rem;
+    color: #7549bd;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 20px;
+}
+
+.opinions-section .btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #ff6347; /* Tomato */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.opinions-section .btn:hover {
+    background-color: #ff4500; /* Orange */
 }

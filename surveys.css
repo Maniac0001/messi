@@ -244,15 +244,17 @@ nav ul li a.active {
     }
 }
 
-/* Footer */
-.footer {
-    background: #2b1a47;
-    color: white;
+
+/* Footer Styling */
+footer {
+    background-color:  #2b1a47;
+    padding: 10px;
     text-align: center;
-    padding: 10px 0;
-    position: sticky;
+    position: relative;
     bottom: 0;
     width: 100%;
+    font-size: 1rem;
+    color: white;
 }
 
 /* Responsive Design */
